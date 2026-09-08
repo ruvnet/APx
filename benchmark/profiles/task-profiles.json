@@ -1,0 +1,139 @@
+{
+  "schema": "apx.task-profiles/v1",
+  "status": "proposed-unvalidated",
+  "referenceMinutesStatus": "synthetic-teaching-assumptions",
+  "profiles": [
+    {
+      "id": "software",
+      "name": "Software",
+      "unit": "accepted bug fixes",
+      "minutes": 120,
+      "example": "Fix a reproducible bug, add regression tests, and pass maintainer review.",
+      "gate": "Working code, regression tests, security checks, maintainability, reviewer acceptance.",
+      "boundary": "A passing test alone does not establish a mergeable change.",
+      "capability": "Build · Debug · Verify",
+      "reference": "Qualified repository maintainer"
+    },
+    {
+      "id": "research",
+      "name": "Research",
+      "unit": "verified evidence briefs",
+      "minutes": 180,
+      "example": "Answer a bounded question using traceable sources and an explicit uncertainty assessment.",
+      "gate": "Sources resolve, claims match evidence, contradictions addressed, independent review.",
+      "boundary": "A fluent draft is not a verified discovery.",
+      "capability": "Retrieve · Reason · Synthesize",
+      "reference": "Qualified subject researcher"
+    },
+    {
+      "id": "publishing",
+      "name": "Publishing",
+      "unit": "accepted book chapters",
+      "minutes": 480,
+      "example": "Deliver an edited chapter against a fixed brief, research scope, and publication standard.",
+      "gate": "Editorial approval, factual checks, originality, citation and rights checks.",
+      "boundary": "Chapters do not automatically add up to a coherent, publishable book.",
+      "capability": "Create · Edit · Verify",
+      "reference": "Professional writer and declared editorial workflow"
+    },
+    {
+      "id": "support",
+      "name": "Customer support",
+      "unit": "resolved support cases",
+      "minutes": 20,
+      "example": "Resolve a customer issue against policy with the correct action and a usable explanation.",
+      "gate": "Correct resolution, policy compliance, no harmful action, no reopening in the declared window.",
+      "boundary": "Fast replies are not successful resolutions.",
+      "capability": "Communicate · Act · Escalate",
+      "reference": "Trained support specialist"
+    },
+    {
+      "id": "finance",
+      "name": "Finance",
+      "unit": "reconciled account packs",
+      "minutes": 180,
+      "example": "Reconcile a synthetic account ledger and document every discrepancy.",
+      "gate": "Arithmetic, source traceability, balanced totals, reviewer signoff.",
+      "boundary": "Research evaluation only. No trades, payments, or financial advice.",
+      "capability": "Calculate · Reconcile · Explain",
+      "reference": "Qualified accountant"
+    },
+    {
+      "id": "legal",
+      "name": "Legal operations",
+      "unit": "reviewed clause inventories",
+      "minutes": 120,
+      "example": "Extract clauses from an authorized contract and flag differences against a fixed playbook.",
+      "gate": "Correct extraction, complete coverage, jurisdiction scope, qualified reviewer approval.",
+      "boundary": "No legal advice or autonomous legal decisions. Qualified review remains mandatory.",
+      "capability": "Retrieve · Compare · Flag",
+      "reference": "Qualified legal professional"
+    },
+    {
+      "id": "health",
+      "name": "Health administration",
+      "unit": "checked synthetic records",
+      "minutes": 45,
+      "example": "Check a synthetic administrative record for missing fields and internal inconsistencies.",
+      "gate": "Completeness, privacy controls, correct administrative checks, qualified adjudication.",
+      "boundary": "No diagnosis, patient treatment, or clinical readiness claim.",
+      "capability": "Extract · Check · Escalate",
+      "reference": "Trained health administration specialist"
+    },
+    {
+      "id": "manufacturing",
+      "name": "Manufacturing",
+      "unit": "validated inspection reports",
+      "minutes": 60,
+      "example": "Compare a synthetic inspection record with a fixed tolerance and maintenance specification.",
+      "gate": "Correct tolerance decisions, traceable measurements, escalation of unsafe cases.",
+      "boundary": "A simulation score does not certify a factory or physical robot.",
+      "capability": "Perceive · Compare · Verify",
+      "reference": "Qualified quality engineer"
+    },
+    {
+      "id": "logistics",
+      "name": "Logistics",
+      "unit": "feasible dispatch plans",
+      "minutes": 90,
+      "example": "Produce a delivery plan under declared vehicle, capacity, time, and safety constraints.",
+      "gate": "Feasible constraints, explicit exceptions, audited cost calculation, operator approval.",
+      "boundary": "No live dispatch or vehicle control in this benchmark.",
+      "capability": "Plan · Optimize · Coordinate",
+      "reference": "Qualified dispatch planner"
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "unit": "reviewed learning packs",
+      "minutes": 120,
+      "example": "Build a lesson, exercises, and answer key for a declared learning objective and audience.",
+      "gate": "Correct answers, pedagogical fit, accessibility, teacher review.",
+      "boundary": "Generated lessons are not evidence of improved student learning.",
+      "capability": "Explain · Create · Assess",
+      "reference": "Qualified teacher"
+    },
+    {
+      "id": "media",
+      "name": "Media production",
+      "unit": "approved media packages",
+      "minutes": 240,
+      "example": "Create a scripted media package against a fixed brief with source and rights documentation.",
+      "gate": "Editorial accuracy, rights, accessibility, technical delivery, reviewer acceptance.",
+      "boundary": "Views and commercial impact require separate downstream measurement.",
+      "capability": "Create · Coordinate · Produce",
+      "reference": "Professional producer"
+    },
+    {
+      "id": "robotics",
+      "name": "Robotics",
+      "unit": "verified simulated missions",
+      "minutes": 30,
+      "example": "Complete a navigation mission in a pinned simulator with obstacles and recovery conditions.",
+      "gate": "Goal reached, collision constraints, energy budget, reproducible state trace.",
+      "boundary": "Simulation and physical deployment scores must remain separate.",
+      "capability": "Perceive · Plan · Act",
+      "reference": "Qualified simulator operator"
+    }
+  ]
+}

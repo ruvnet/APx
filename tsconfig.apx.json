@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["app/page.tsx", "app/layout.tsx", "app/experience.tsx", "app/power-scene.tsx", "app/domain-data.ts", "lib/scenario-metrics.ts"],
+  "exclude": ["node_modules", "worker", "db", "examples", "app/chatgpt-auth.ts"]
+}

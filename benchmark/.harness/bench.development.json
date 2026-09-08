@@ -1,0 +1,54 @@
+{
+  "id": "apx-development-smoke",
+  "version": "0.1.0",
+  "createdAt": "2026-09-07T00:00:00.000Z",
+  "taskHash": "0b712aa1ee24fd02d47b23e7b654c8d0060f8d5a715c12525750387bcb23240a",
+  "tasks": [
+    {
+      "id": "apx-kernel-invariants",
+      "repo": ".",
+      "commit": "DEVELOPMENT-UNPINNED",
+      "title": "APx kernel invariants remain true",
+      "prompt": "Preserve the APx arithmetic, failure inclusive human calibration, duplicate credit exclusion, evidence gates, bounded input, and promotion safety invariants. This is a visible regression smoke task, not an independent occupational holdout or a human productivity measurement.",
+      "publicTestCommand": "node --test test/core.test.mjs",
+      "hiddenTestCommand": "node --test test/core.test.mjs",
+      "regressionTestCommand": "node --test",
+      "timeoutMs": 120000,
+      "maxCostUsd": 0,
+      "allowedMutationFiles": [
+        "src/core.mjs",
+        "src/metrics.mjs",
+        "src/adapters.mjs"
+      ],
+      "blockedFiles": [
+        "test/**",
+        ".harness/**",
+        ".env",
+        ".env.*",
+        ".git/**",
+        "package.json",
+        "package-lock.json",
+        "pnpm-lock.yaml",
+        "yarn.lock",
+        ".github/workflows/**"
+      ],
+      "successCriteria": [
+        "All visible APx kernel tests pass",
+        "The complete local regression suite passes",
+        "Synthetic fixtures never certify real human productivity",
+        "No protected test, manifest, or benchmark file changes",
+        "No models, credentials, external effects, or paid execution are used"
+      ],
+      "difficulty": 2,
+      "tags": [
+        "apx",
+        "kernel-invariants",
+        "build-governance",
+        "visible-smoke",
+        "no-independent-holdout",
+        "not-certified",
+        "development-unpinned"
+      ]
+    }
+  ]
+}

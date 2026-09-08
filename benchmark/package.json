@@ -1,0 +1,11 @@
+{
+  "name": "@ruvnet/apx-benchmark",
+  "version": "0.1.0",
+  "description": "APx reference benchmark: accepted human reference work per wall hour, with explicit evidence and promotion gates",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "exports": { ".": "./src/core.mjs", "./adapters": "./src/adapters.mjs", "./demo": "./src/demo.mjs", "./metrics": "./src/metrics.mjs" },
+  "bin": { "apx": "./src/cli.mjs" },
+  "scripts": { "test": "node --test", "demo": "node src/cli.mjs demo", "mcp": "node src/mcp.mjs" }
+}

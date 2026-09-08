@@ -1,0 +1,20 @@
+{
+  "schema": "apx.native-suite-assurance/v1",
+  "upstream": {
+    "package": "@metaharness/darwin",
+    "version": "0.10.2",
+    "sourceCommit": "d5833dc6512ac1adeeef91a331c29055cd8a4dbb",
+    "source": "https://github.com/ruvnet/metaharness/blob/d5833dc6512ac1adeeef91a331c29055cd8a4dbb/packages/darwin-mode/src/bench/suite.ts"
+  },
+  "taskHash": "0b712aa1ee24fd02d47b23e7b654c8d0060f8d5a715c12525750387bcb23240a",
+  "commit": "DEVELOPMENT-UNPINNED",
+  "certified": false,
+  "independentHoldout": false,
+  "scope": "Native Darwin coding-suite structure and public APx regression checks only",
+  "publicationClaim": "No personal AP, APx, speedup, human baseline, native evolution, or live Autogenous integration was measured",
+  "note": "The required hiddenTestCommand repeats the visible test. It is not hidden evidence. maxCostUsd is a zero spend ceiling, not measured cost. Run from the APx package root because task.repo is dot.",
+  "nativeVerifier": {
+    "status": "not-run-by-generator",
+    "command": "npx -y @metaharness/darwin@0.10.2 bench verify .harness/bench.development.json"
+  }
+}

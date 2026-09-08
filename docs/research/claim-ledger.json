@@ -1,0 +1,137 @@
+{
+  "accessDate": "2026-09-07",
+  "scope": "Primary source APx methodology synthesis",
+  "sources": [
+    {
+      "date": "06 SEP 2026",
+      "design": "APx reports runtime separately from accepted output.",
+      "publisher": "OpenAI",
+      "text": "The 3.1 workday figure uses summed agent runtime and an eight hour day. It is not a human productivity multiplier.",
+      "title": "Agent workdays are runtime",
+      "url": "https://openai.com/index/research-acceleration-view-inside-openai/"
+    },
+    {
+      "date": "08 MAY 2026",
+      "design": "Every APx score names a task family and reference cohort.",
+      "publisher": "METR",
+      "text": "Time horizons describe task difficulty at a stated success probability. They do not measure how long an agent ran or whether it can replace a job.",
+      "title": "Human time measures task difficulty",
+      "url": "https://metr.org/time-horizons/"
+    },
+    {
+      "date": "24 FEB 2026",
+      "design": "Keep wall time, agent runtime, and human labor distinct.",
+      "publisher": "METR",
+      "text": "A followup productivity study identified selection bias and unreliable task timing when developers ran concurrent agents.",
+      "title": "The clocks get harder with concurrency",
+      "url": "https://metr.org/blog/2026-02-24-uplift-update/"
+    },
+    {
+      "date": "25 SEP 2025",
+      "design": "Include review, repair, and integration before crediting output.",
+      "publisher": "OpenAI · GDPval",
+      "text": "GDPval evaluates work across 44 occupations using expert judging. Reported inference speed comparisons omit oversight and integration.",
+      "title": "Grade professional deliverables",
+      "url": "https://openai.com/index/gdpval/"
+    },
+    {
+      "date": "23 FEB 2026",
+      "design": "APx is a distinct measurement proposal, not Mercor’s APEX benchmark.",
+      "publisher": "Mercor · APEX Agents",
+      "text": "APEX Agents provides 480 professional tasks with prompts, files, rubrics, and gold outputs.",
+      "title": "Work spans tools and applications",
+      "url": "https://arxiv.org/abs/2601.14242"
+    },
+    {
+      "date": "ACCESSED 07 SEP 2026",
+      "design": "Keep job, function, capability, and environment as separate tags.",
+      "publisher": "O*NET Resource Center",
+      "text": "The occupational content model distinguishes tasks, work activities, context, skills, and abilities.",
+      "title": "Use a task taxonomy, not job stereotypes",
+      "url": "https://www.onetcenter.org/content.html"
+    },
+    {
+      "date": "13 AUG 2025",
+      "design": "Require an independent acceptance gate beyond machine tests.",
+      "publisher": "METR",
+      "text": "A small study found that passing functional tests did not imply a change was ready to merge. Results were specific to its older model and tasks.",
+      "title": "Tests can miss real acceptance",
+      "url": "https://metr.org/blog/2025-08-12-research-update-towards-reconciling-slowdown-with-time-horizons/"
+    },
+    {
+      "date": "AI RMF 1.0 · 2023",
+      "design": "Safety failures block publishable scores. APx is not NIST certified.",
+      "publisher": "NIST",
+      "text": "The voluntary AI risk framework supports contextual evaluation and trustworthiness across a system’s lifecycle.",
+      "title": "Protect evaluation integrity",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    }
+  ],
+  "additionalPrimarySources": [
+    {
+      "title": "APEX Agents",
+      "date": "2026-02-23",
+      "url": "https://arxiv.org/abs/2601.14242",
+      "claim": "480 professional agent tasks; existing similarly named benchmark",
+      "provenance": "turn10view0"
+    },
+    {
+      "title": "OpenAI Research Acceleration",
+      "date": "2026-09-06",
+      "url": "https://openai.com/index/research-acceleration-view-inside-openai/",
+      "claim": "3.1 agent workdays derives from total runtime, not human output",
+      "provenance": "turn7view0"
+    },
+    {
+      "title": "Darwin suite",
+      "url": "https://github.com/ruvnet/metaharness/blob/d5833dc6512ac1adeeef91a331c29055cd8a4dbb/packages/darwin-mode/src/bench/suite.ts",
+      "claim": "Native sorted task hash, coding suite",
+      "confidence": "source verified and native hash verifier executed"
+    },
+    {
+      "title": "Autogenous receipt export",
+      "url": "https://github.com/ruvnet/autogenous/blob/7bf327a9754ce798364dbee8b2825af42a421fd4/packages/radio-moe/src/receipt-export.ts",
+      "claim": "Unmetered resource zeros and no independent holdout",
+      "confidence": "source verified; live adapter not executed"
+    },
+    {
+      "title": "ruClip governance",
+      "url": "https://github.com/ruvnet/ruClip/blob/6e73a8f060bcbb69965a50ffe4627e33622d4094/docs/design/RUCLIP-METAHARNESS.md",
+      "claim": "MetaHarness build time, Autogenous runtime governance",
+      "confidence": "source verified"
+    }
+  ],
+  "gaps": [
+    {
+      "claim": "rUv personal APx",
+      "status": "unmeasured",
+      "missing": "Timed representative human baselines and full accepted-output receipts",
+      "next": "Run independently adjudicated matched pilot"
+    },
+    {
+      "claim": "Population uncertainty",
+      "status": "not implemented",
+      "missing": "Human participant and task-sampling uncertainty",
+      "next": "Preregister hierarchical calibration study"
+    },
+    {
+      "claim": "Full native Autogenous or ruClip compatibility",
+      "status": "contract adapters only",
+      "missing": "Configured trusted external runtime integration tests",
+      "next": "Run sandboxed authenticated connector tests after endpoint approval"
+    },
+    {
+      "claim": "General industry coverage",
+      "status": "profiles only",
+      "missing": "Qualified cohorts and reviewed datasets per domain",
+      "next": "Calibrate narrow software tasks first"
+    }
+  ],
+  "searchLog": [
+    "Primary searches: METR task time horizons, experienced developer randomized productivity, concurrent agent timing, GDPval professional tasks, APEX naming and work benchmarks",
+    "Taxonomy and governance: O*NET content model and database; NIST AI RMF; Anthropic Economic Index",
+    "RuV exact contracts: pinned package manifests, Darwin suite implementation, Autogenous receipt export, ruClip integration design",
+    "Followup: parent verified origin of 3.1, METR clocks, GDPval limitations, APEX naming collision; independent core review produced four fixes",
+    "Stop: consequential methodological claims supported; remaining material gaps require experiments, not additional literature"
+  ]
+}
