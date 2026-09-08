@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "APx · Agentic Power",
-  description: "A proposed measure of verified human and agent output. Same task. Same standard. Time included.",
+  description: "APx measures how quickly an AI agent system produces approved work compared with a qualified person doing the same job.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

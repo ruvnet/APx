@@ -57,4 +57,4 @@ The package is private and unpublished. Promotion only returns a recommendation,
 
 Run `node --test`. Then run `node src/cli.mjs demo | node src/cli.mjs evaluate -` and verify AP 9, APx approximately 3.17, `status: synthetic`, and `certified: false`. Replace fixtures only after freezing a real cohort, every task attempt, costs, timing boundaries, evaluator, and holdout policy.
 
-See `docs/CONTRACT.md`, `docs/ADR-001.md`, and `docs/SECURITY.md` for rules and limitations.
+See `docs/CONTRACT.md`, `docs/ADR-001.md`, `docs/ADR-002.md`, `docs/ADR-003.md`, and `docs/SECURITY.md` for rules, architecture decisions, and limitations.

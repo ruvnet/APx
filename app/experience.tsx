@@ -67,7 +67,7 @@ export default function Experience() {
     <a className="skip-link" href="#lab">Skip to power calculator</a>
     <header className="site-header">
       <a className="brand" href="#home" aria-label="APx home">AP<span>x</span><small>AGENTIC<br/>POWER</small></a>
-      <nav aria-label="Main navigation"><a href="#unit">The unit</a><a href="#lab">Power lab</a><a href="#spectrum">The spectrum</a><a href="#research">Research</a></nav>
+      <nav aria-label="Main navigation"><a href="#plain">Start here</a><a href="#unit">The unit</a><a href="#lab">Power lab</a><a href="#research">Research</a></nav>
       <a className="header-link" href="#framework">Read the standard <ArrowUpRight size={16}/></a>
     </header>
 
@@ -76,9 +76,9 @@ export default function Experience() {
       <div className="hero-copy">
         <p className="eyebrow"><span className="small-square"/> A NEW REFERENCE FOR USEFUL WORK</p>
         <h1>Intelligence,<br/>measured<br/>in <em>work.</em></h1>
-        <p className="hero-intro">Horsepower made engines understandable.<br/>APx makes agent output comparable.</p>
-        <a className="button primary" href="#unit">Discover the measure <ArrowDown size={17}/></a>
-        <p className="hero-foot">Same task. Same standard. Time included.</p>
+        <p className="hero-intro">APx asks a simple question:<br/><strong>How much finished, approved work did the agents produce?</strong></p>
+        <a className="button primary" href="#plain">See a simple example <ArrowDown size={17}/></a>
+        <p className="hero-foot">Compare the same task. Count only accepted results. Include all elapsed time.</p>
       </div>
       <div className="hero-instrument">
         <div className="instrument-label"><span>APx / INSTRUMENT 001</span><span>3D + TIME</span></div>
@@ -87,6 +87,39 @@ export default function Experience() {
         <div className="instrument-controls"><button onClick={()=>setPlaying(!playing)} aria-label={playing?"Pause animation":"Play animation"}>{playing?<Pause size={15}/>:<Play size={15}/>}</button><div><label id="time-label">REPLAY TIME <span>{Math.round(time*100)}%</span></label><Slider aria-labelledby="time-label" value={[time*100]} min={0} max={100} step={1} onValueChange={v=>{setTime(v[0]/100);setPlaying(false);}}/></div><span className="control-caption">THE FOURTH<br/>DIMENSION</span></div>
       </div>
       <div className="hero-bottom"><span>SCROLL TO UNDERSTAND <ArrowDown size={13}/></span><span>PROPOSED STANDARD / v0.1 / BY rUv</span><span>DEMONSTRATION, NOT TELEMETRY</span></div>
+    </section>
+
+    <section id="plain" className="section plain-section">
+      <div className="plain-lead reveal">
+        <p className="eyebrow">START HERE / APx IN SIMPLE TERMS</p>
+        <h2>Think of APx as<br/><em>horsepower for agents.</em></h2>
+        <p>A car engine needs horsepower so we can compare useful pulling power. Agent systems need APx so we can compare useful work. APx counts finished work that passes review. Busy agents, long runtimes and large amounts of code do not count by themselves.</p>
+      </div>
+      <div className="simple-example reveal" aria-label="Simple Agentic Power example">
+        <div className="example-person">
+          <span className="example-label">A QUALIFIED PERSON</span>
+          <strong>8 hours</strong>
+          <p>to complete and approve one defined task</p>
+        </div>
+        <span className="example-arrow" aria-hidden="true">→</span>
+        <div className="example-agent">
+          <span className="example-label">THE AGENT SYSTEM</span>
+          <strong>1 hour</strong>
+          <p>to deliver the same approved result</p>
+        </div>
+        <span className="example-equals" aria-hidden="true">=</span>
+        <div className="example-score">
+          <span className="example-label">AGENTIC POWER</span>
+          <strong>8 <small>AP</small></strong>
+          <p>Eight times the human reference rate, shown as APx 3</p>
+        </div>
+      </div>
+      <div className="plain-rules reveal">
+        <article><span>01</span><div><h3>Start with the same job</h3><p>Compare the agent and person against one clear task and one acceptance standard.</p></div></article>
+        <article><span>02</span><div><h3>Count work that passes</h3><p>Broken, repeated or unverified output earns no credit. Its time and cost still count.</p></div></article>
+        <article><span>03</span><div><h3>Include the full workflow</h3><p>Measure waiting, retries, review, correction and human help from start to finish.</p></div></article>
+      </div>
+      <p className="plain-summary reveal"><strong>One sentence:</strong> APx tells you how quickly an agent system produces approved work compared with a qualified person doing the same job.</p>
     </section>
 
     <section id="unit" className="section unit-section">

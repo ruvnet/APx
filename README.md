@@ -101,4 +101,12 @@ Hashes and declarations do not prove truth. The current bootstrap interval is co
 
 APx is distinct from Mercor’s APEX benchmark family. No naming clearance, standards adoption, or IP novelty claim is made.
 
+## Architecture decisions
+
+The implementation records major choices as reviewable ADRs:
+
+1. [Accepted reference throughput with a logarithmic presentation](benchmark/docs/ADR-001.md)
+2. [Evidence bound acceptance and fail closed scoring](benchmark/docs/ADR-002.md)
+3. [Progressive disclosure for the APx explainer](benchmark/docs/ADR-003.md)
+
 Created by [rUv](https://github.com/ruvnet) for reproducible AI agent evaluation across jobs, functions and industries.
