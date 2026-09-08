@@ -5,7 +5,7 @@
   "private": true,
   "type": "module",
   "engines": { "node": ">=22" },
-  "exports": { ".": "./src/core.mjs", "./adapters": "./src/adapters.mjs", "./demo": "./src/demo.mjs", "./metrics": "./src/metrics.mjs" },
-  "bin": { "apx": "./src/cli.mjs" },
-  "scripts": { "test": "node --test", "demo": "node src/cli.mjs demo", "mcp": "node src/mcp.mjs" }
+  "exports": { ".": "./src/core.mjs", "./adapters": "./src/adapters.mjs", "./demo": "./src/demo.mjs", "./metrics": "./src/metrics.mjs", "./metaharness": "./metaharness/src/index.mjs" },
+  "bin": { "apx": "./src/cli.mjs", "apx-metaharness": "./metaharness/bin/apx-metaharness.mjs" },
+  "scripts": { "test": "node --test", "demo": "node src/cli.mjs demo", "mcp": "node src/mcp.mjs", "metaharness:demo": "node metaharness/bin/apx-metaharness.mjs demo", "metaharness:compile": "node metaharness/bin/apx-metaharness.mjs compile metaharness/specs/software.development.json" }
 }

@@ -108,5 +108,16 @@ The implementation records major choices as reviewable ADRs:
 1. [Accepted reference throughput with a logarithmic presentation](benchmark/docs/ADR-001.md)
 2. [Evidence bound acceptance and fail closed scoring](benchmark/docs/ADR-002.md)
 3. [Progressive disclosure for the APx explainer](benchmark/docs/ADR-003.md)
+4. [Separate MetaHarness execution from APx measurement](benchmark/docs/ADR-004.md)
+
+## APx MetaHarness
+
+The [APx MetaHarness](benchmark/metaharness/README.md) turns versioned task packs into native Darwin suites, freezes measurement context, scores evidence bound receipts and applies paired promotion gates. It keeps task execution separate from APx scoring so a candidate cannot rewrite its own evaluator.
+
+    cd benchmark
+    node metaharness/bin/apx-metaharness.mjs compile metaharness/specs/software.development.json
+    node metaharness/bin/apx-metaharness.mjs demo
+    node metaharness/bin/apx-metaharness.mjs demo | node metaharness/bin/apx-metaharness.mjs promote -
+    node --test metaharness/test/metaharness.test.mjs
 
 Created by [rUv](https://github.com/ruvnet) for reproducible AI agent evaluation across jobs, functions and industries.

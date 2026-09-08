@@ -13,13 +13,15 @@ Scope: this local package, CLI, pure metrics, contract adapters, and newline-del
 | Promotion | Holdout leakage, pseudoreplication, speed hiding quality loss | Separate IDs, full-campaign bootstrap, task/class/quality/safety/cost gates | Statistical independence and pristine holdouts require outside scheduling and governance |
 | ruClip governance | Approval confused with correctness; unmetered zeros treated as free | Separate adjudication, approval policy violations, explicit unknown metering | Caller must retain imported violations and protect receipt authenticity |
 | CLI file input | Read special files or oversized content | Regular-file and size checks; JSON only | Local user explicitly chooses path; do not expose CLI file paths as a remote API |
+| MetaHarness task pack | Submitted commands become code execution | Compiler treats commands as bounded data and never executes them | Native runner operator must trust repository configuration and isolate task execution |
+| Campaign envelopes | A stored result or manifest is edited after evaluation | Canonical envelope hash binds kind, timestamp and payload | Hashes detect changes but do not authenticate the publisher; production needs signatures and immutable storage |
 | Outputs | Synthetic results represented as certification | Synthetic/pilot labels, certified=false, deployAuthorized=false | A publisher can misquote outputs; product UI must preserve status and limitations |
 
 No credentials are accessed and no network calls occur in runtime code. Tests spawn only local Node CLI processes with controlled commands to verify the CLI boundary; this is not a scorer capability.
 
 ## Assessment provenance
 
-Method: direct source inspection plus deterministic negative and integration tests. Runtime dependency count: zero. No external advisory feed was queried because there are no third-party package dependencies. Node runtime vulnerabilities, host hardening, and any future dependencies remain outside this package's assessment. No Ruflo security scanner result is claimed. The relevant Ruflo security methodology was followed for boundary definition, read-only inspection, evidence validation, and regression tests.
+Method: direct source inspection, deterministic negative and integration tests, and read only Ruflo 3.25.6 scans. Runtime dependency count for the benchmark package is zero. No external advisory feed was queried because the standalone benchmark has no third-party runtime dependencies. Node runtime vulnerabilities, host hardening, the separate Site dependency tree, and any future dependencies remain outside this package assessment. The deep scanner reported zero findings and the secret scanner reported no detected secrets on 2026-09-08. Scanner coverage is supporting evidence, not proof of security.
 
 No confirmed critical/high code issue remains from this scoped inspection. This is not a production security certification. Evidence authenticity, representative calibration, signatures, independent holdout governance, resource isolation for future native task execution, and authenticated remote access are explicit deployment blockers for certified or remotely hosted scoring.
 

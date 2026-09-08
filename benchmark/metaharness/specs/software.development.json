@@ -1,0 +1,29 @@
+{
+  "schema": "apx.metaharness/v1",
+  "id": "apx-software-development-example",
+  "version": "0.1.0",
+  "createdAt": "2026-09-08T00:00:00.000Z",
+  "sourceCommit": "DEVELOPMENT-UNPINNED",
+  "repository": ".",
+  "partition": "selection",
+  "selectionId": "software-selection-example-v1",
+  "holdoutId": "software-holdout-external-v1",
+  "tasks": [
+    {
+      "id": "apx-kernel-integrity",
+      "classId": "software-verification",
+      "title": "Preserve APx scoring integrity",
+      "prompt": "Improve the APx scoring implementation while preserving its evidence, safety, identity and accounting invariants.",
+      "acceptanceCriteria": ["All APx kernel tests pass", "Known safety failures make official AP and APx unavailable", "Duplicate deliverables earn credit once", "Synthetic fixtures remain visibly uncertified"],
+      "publicTestCommand": "node --test test/core.test.mjs",
+      "hiddenTestCommand": "node --test test/core.test.mjs",
+      "regressionTestCommand": "node --test",
+      "timeoutMs": 120000,
+      "maxCostUsd": 0,
+      "allowedMutationFiles": ["src/core.mjs", "src/metrics.mjs", "src/adapters.mjs"],
+      "blockedFiles": ["test/**", ".harness/**", "metaharness/specs/**", ".env", ".env.*", ".git/**", "package.json", "package-lock.json"],
+      "difficulty": 3,
+      "tags": ["apx", "software", "evidence", "visible-selection-example"]
+    }
+  ]
+}

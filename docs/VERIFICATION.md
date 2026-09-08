@@ -43,6 +43,12 @@ npx tsc --noEmit --project tsconfig.apx.json
 
 The parent independently reproduced the safety case after repair and obtained INELIGIBLE with null official scores. The extra human labor case returned REJECT with explicit labor regression reasons.
 
+## APx MetaHarness
+
+The APx MetaHarness adds a native Darwin suite compiler, frozen campaign envelopes, run evaluation, paired promotion, bounded file input and tamper detection. Its visible software selection pack compiled successfully and the exact native verifier reported one task with a valid suite hash.
+
+The integrated regression command now passes 158 checks, including ten MetaHarness checks for task pack identity, source pin format, multiline command rejection, envelope tampering, end to end synthetic promotion and the permanent absence of deployment authority. Ruflo 3.25.6 deep and secret scans reported zero findings in the new MetaHarness directory. Direct inspection still treats native task execution, receipt authenticity, human calibration and holdout custody as external trust boundaries.
+
 ## Explicit limits
 
 No browser, screenshot, visual, mobile device or end to end interaction QA was requested or performed. The Three.js render is implemented and compiled; visual realism and real device frame rate have not been measured.

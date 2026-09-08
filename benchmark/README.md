@@ -25,6 +25,15 @@ node src/mcp.mjs
 
 The tutorial executes financial reconciliation, source prioritization, and output verification using bounded deterministic local functions. The functions genuinely run and their local milliseconds are measured. Human reference times, end-to-end workflow time, costs, and agent runtime are explicitly synthetic. It produces AP 9, APx approximately 3.17, and `certified: false`. These values are not evidence for a personal productivity claim.
 
+## MetaHarness pipeline
+
+The [APx MetaHarness](metaharness/README.md) compiles versioned APx task packs into native Darwin suites, freezes measurement campaigns, scores bound receipts, and gates paired promotions. The wrapper does not execute submitted commands or authorize deployment.
+
+    node metaharness/bin/apx-metaharness.mjs compile metaharness/specs/software.development.json
+node metaharness/bin/apx-metaharness.mjs demo
+node metaharness/bin/apx-metaharness.mjs demo | node metaharness/bin/apx-metaharness.mjs promote -
+node --test metaharness/test/metaharness.test.mjs
+
 ## Interfaces
 
 | Module | Exports | Purpose |
@@ -57,4 +66,4 @@ The package is private and unpublished. Promotion only returns a recommendation,
 
 Run `node --test`. Then run `node src/cli.mjs demo | node src/cli.mjs evaluate -` and verify AP 9, APx approximately 3.17, `status: synthetic`, and `certified: false`. Replace fixtures only after freezing a real cohort, every task attempt, costs, timing boundaries, evaluator, and holdout policy.
 
-See `docs/CONTRACT.md`, `docs/ADR-001.md`, `docs/ADR-002.md`, `docs/ADR-003.md`, and `docs/SECURITY.md` for rules, architecture decisions, and limitations.
+See `docs/CONTRACT.md`, `docs/ADR-001.md`, `docs/ADR-002.md`, `docs/ADR-003.md`, `docs/ADR-004.md`, and `docs/SECURITY.md` for rules, architecture decisions, and limitations.
